@@ -1,4 +1,4 @@
---cpu Cortex-M4.fp
+--cpu=Cortex-M4.fp.sp
 "standard_tpye_c\startup_stm32f407xx.o"
 "standard_tpye_c\main.o"
 "standard_tpye_c\gpio.o"
@@ -93,11 +93,11 @@
 "standard_tpye_c\referee_usart_task.o"
 "standard_tpye_c\remote_control.o"
 "standard_tpye_c\shoot.o"
+"standard_tpye_c\test_task.o"
 "standard_tpye_c\usb_task.o"
 "standard_tpye_c\voltage_task.o"
-"standard_tpye_c\servo_task.o"
 "standard_tpye_c\led_flow_task.o"
-"standard_tpye_c\test_task.o"
+"standard_tpye_c\servo_task.o"
 "standard_tpye_c\oled.o"
 "standard_tpye_c\bmi088driver.o"
 "standard_tpye_c\bmi088middleware.o"
@@ -112,6 +112,6 @@
 "standard_tpye_c\mem_mang4.o"
 "standard_tpye_c\pid.o"
 --strict --scatter "standard_tpye_c\standard_tpye_c.sct"
---summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
 --list "standard_tpye_c.map" -o standard_tpye_c\standard_tpye_c.axf

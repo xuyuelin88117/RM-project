@@ -1,4 +1,4 @@
-/**
+ /**
   ****************************(C) COPYRIGHT 2019 DJI****************************
   * @file       chassis_power_control.c/h
   * @brief      chassis power control.µ×ÅÌ¹¦ÂÊ¿ØÖÆ

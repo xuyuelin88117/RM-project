@@ -29,8 +29,6 @@
 #include "INS_task.h"
 #include "chassis_power_control.h"
 
-#include "bsp_buzzer.h"
-#include "main.h"
 #define rc_deadband_limit(input, output, dealine)        \
     {                                                    \
         if ((input) > (dealine) || (input) < -(dealine)) \
@@ -408,8 +406,7 @@ void chassis_rc_to_control_vector(fp32 *vx_set, fp32 *vy_set, chassis_move_t *ch
     //¼üÅÌ¿ØÖÆ
     if (chassis_move_rc_to_vector->chassis_RC->key.v & CHASSIS_FRONT_KEY)
     {
-      buzzer_on(1, 30000);  
-			vx_set_channel = chassis_move_rc_to_vector->vx_max_speed;
+        vx_set_channel = chassis_move_rc_to_vector->vx_max_speed;
     }
     else if (chassis_move_rc_to_vector->chassis_RC->key.v & CHASSIS_BACK_KEY)
     {
